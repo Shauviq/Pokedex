@@ -21,6 +21,7 @@
 }
 
 .pokemon-name{
+    color: black;
     font-size: larger;
     margin-bottom: 1rem;
 }
