@@ -1,7 +1,9 @@
-.pokemon-detail-wrapper{
+.pokemon-details-wrapper{
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .pokemon-detail-name{
@@ -27,4 +29,13 @@
     border-radius: 15px;
     padding: 1rem;
     background-color: gainsboro;
+}
+
+.similarpokemonlist{
+    margin-top: 2rem;
+}
+
+.similarpokemonlist-wrapper{
+    margin-top: 2rem;
+    font-size: x-large;
 }

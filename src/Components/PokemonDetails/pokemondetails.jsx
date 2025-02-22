@@ -7,9 +7,9 @@ import usePokemonList from "../../Hooks/usePokemonList";
 import usepokemondetails from "../../Hooks/usepokemondetails";
 
 
-function PokemonDetails(){
+function PokemonDetails({PokemonName}){
     const {id} = useParams();
-    const [pokemon] = usepokemondetails(id);
+    const [pokemon] = usepokemondetails(id , PokemonName);
     
     return(
         <div className="pokemon-details-wrapper">
@@ -23,11 +23,11 @@ function PokemonDetails(){
 
             {
                 pokemon.types && pokemon.similarPokemon && 
-                <div>
+                <div className="similarpokemonlist-wrapper">
                     More {pokemon.types[0]} type pokemons
-                    <ul>
+                    <ul className="similarpokemonlist">
                         {pokemon.similarPokemon.map((p) => 
-                            <li key={p.pokemon.id}>
+                            <li key={p.pokemon.url}>
                                 {p.pokemon.name}
                             </li>
                         )}
